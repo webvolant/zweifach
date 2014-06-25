@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} {{ detail.title }} {% endblock %} 
+{% block keywords %} {{ detail.keywords }} {% endblock %} 
+
+{% block breadcrumbs %}
+	
+	{% if request.path == "/en/" or request.path == "/ru/" or request.path == "/de/" %} 
+		<li class="active"> {{ detail.title }} </li> 
+	{% else %}
+		<li><a href="/">Главная</a></li>
+  
+		<li class="active"> {{ detail.title }} </li>
+	{% endif %} 
+  	
+{% endblock %}
+
+{% block content %}
+
+<h1 class="page-header">
+	{{ detail.title }}
+</h1>
+{{ detail.content|safe }}
+
+{% endblock %}

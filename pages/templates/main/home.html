@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load localeurl_tags %}
+
+{% load bootstrap3 %}
+
+{% load staticfiles %}
+
+            {% block header %}
+
+            <div class="row service">
+                <div class="col-sm-3">
+                    <a href="/"><img src="{% static "img/icon_tec.png" %}" title="service" alt="zweifach" class="" />
+                    <div class="stext">Технический перевод</div>
+                    </a>
+
+                </div>
+                <div class="col-sm-3">
+                    <a href="/"><img src="{% static "img/icon_docum.png" %}" title="service" alt="zweifach" class="" />
+                    <div class="stext">Перевод документов</div>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="/"><img src="{% static "img/icon_stamp.png" %}" title="service" alt="zweifach" class="" />
+                    <div class="stext">Заверение переводов</div>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="/"><img src="{% static "img/icon_sp.png" %}" title="service" alt="zweifach" class="" />
+                    <div class="stext">Устный перевод</div>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="/"><img src="{% static "img/icon_local.png" %}" title="service" alt="zweifach" class="" />
+                    <div class="stext">Локализация сайтов</div>
+                    </a>
+                </div>
+            </div>
+
+            {% endblock header %}
+
+{% block content %}
+
+    {{ detail.content|safe }}
+
+{% endblock content %}
+

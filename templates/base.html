@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+
+        {% load i18n %}
+		{% load localeurl_tags %}
+
+        <title>{% block title %}home {% endblock %} / Zweifach B</title>
+
+        <meta content='{% block keywords %}{% endblock %}' name='keywords'/>
+
+
+
+        {% load bootstrap3 %}
+
+		{# Load CSS and JavaScript #}
+
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
+
+		{% load staticfiles %}
+		<link rel="stylesheet" type="text/css" href="{% static "bootstrap.css" %}">
+		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "template.css" %}">
+		
+		<!--<link rel="stylesheet" type="text/css" href="{% static "owl.carousel.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "owl.theme.css" %}">-->
+
+
+
+		
+
+
+
+<style type="text/css">
+/* Account for fixed navbar */
+	body {
+	  padding-top: 0px;
+	  padding-bottom: 0px;
+	}
+
+	/* Finesse the page header spacing */
+	.page-header {
+	  margin-bottom: 30px;
+	}
+	.page-header .lead {
+	  margin-bottom: 10px;
+	}
+
+
+	/* Non-responsive overrides
+	 *
+	 * Utilitze the following CSS to disable the responsive-ness of the container,
+	 * grid system, and navbar.
+	 */
+
+	/* Reset the container */
+	.container {
+	  width: 980px;
+	  max-width: none !important;
+
+	}
+
+	/* Demonstrate the grids */
+	.col-xs-4 {
+	  padding-top: 15px;
+	  padding-bottom: 15px;
+	  background-color: ;
+	  
+	  border: ;
+	  
+	}
+
+	.container .navbar-header,
+	.container .navbar-collapse {
+	  margin-right: 0;
+	  margin-left: 0;
+	}
+
+	/* Always float the navbar header */
+	.navbar-header {
+	  float: left;
+	}
+
+	/* Undo the collapsing navbar */
+	.navbar-collapse {
+	  display: block !important;
+	  height: auto !important;
+	  padding-bottom: 0;
+	  overflow: visible !important;
+	}
+
+	.navbar-toggle {
+	  display: none;
+	}
+	.navbar-collapse {
+	  border-top: 0;
+	}
+
+	.navbar-brand {
+	  margin-left: -15px;
+	}
+
+	/* Always apply the floated nav */
+	.navbar-nav {
+	  float: left;
+	  margin: 0;
+	}
+	.navbar-nav > li {
+	  float: left;
+	}
+	.navbar-nav > li > a {
+	  padding: 15px;
+	}
+
+	/* Redeclare since we override the float above */
+	.navbar-nav.navbar-right {
+	  float: right;
+	}
+
+	/* Undo custom dropdowns */
+	.navbar .navbar-nav .open .dropdown-menu {
+	  position: absolute;
+	  float: left;
+	  background-color: #fff;
+	  border: 1px solid #ccc;
+	  border: 1px solid rgba(0, 0, 0, .15);
+	  border-width: 0 1px 1px;
+	  border-radius: 0 0 4px 4px;
+	  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	  color: #333;
+	}
+	.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+	  color: #fff !important;
+	  background-color: #428bca !important;
+	}
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+	.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+	  color: #999 !important;
+	  background-color: transparent !important;
+	}
+
+</style>
+
+ 
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+	
+	<script src="{% static "bootstrap.js" %}"></script>
+	<!--<script type="text/javascript" src="{% static "owl.carousel-min.js" %}"></script>-->
+
+	<script type="text/javascript">
+	       $(document).ready(function() {
+
+	       	//$('.carousel').carousel({
+			//  interval: 2000
+			//});
+
+            var link = window.location.pathname;
+            //window.alert(link);
+            var mas = link.split('/');
+            var prefix = mas[1];
+
+            //$(".menu li:first a").attr('href',"/"+prefix+"/");
+            //$(".bmenu li:first a").attr('href',"/"+prefix+"/");
+            //window.alert($(".menu li:first a").attr('href'));
+
+            $('.menu li a[href="'+link+'"]').parent().addClass('mactive');
+            $('.bmenu li a[href="'+link+'"]').parent().addClass('mactive');
+
+
+            //if(link == "/") {$('.menu li:first').addClass('mactive');} else {$('.menu li a[href="'+link+'"]').parent().addClass('mactive');}
+
+
+
+		});
+	</script>
+
+
+
+    </head>
+<body>
+
+<div class="menu_back">
+   <div class="container middle">
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="row gmenu">
+                        <div class="col-sm-12 menu">
+                            <ul class="nav nav-pills menu">
+                              <!--<li class="dropdown">
+                                <a class="dropdown-toggle"
+                                   data-toggle="dropdown"
+                                   href="#">
+                                    Dropdown
+                                    <b class="caret"></b>
+                                  </a>
+                                <ul class="dropdown-menu">
+
+                                </ul>
+                              </li>-->
+
+                                <li><a href="{% url 'pages.views.home'  %}">{% trans "Home" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'leistungen' %}">{% trans "Leistungen" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'sprachkombinationen' %}">{% trans "Sprachkombinationen" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'preise' %}">{% trans "Preise" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'agb' %}">{% trans "AGB" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'impressum' %}">{% trans "Impressum" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'kontakt' %}">{% trans "Kontakt" %}</a></li>
+
+                                
+
+
+                            <a class="mbutton" href="{% url 'orderform.views.order' %}"><button type="button" class="btn btn-success">{% trans "Bestellung" %}</button></a>
+
+                            <ul class="nav2 nav-pills2 class_language">
+
+                                    {% for lang in LANGUAGES %}
+                                        {% ifequal lang.0 LANGUAGE_CODE %}
+                                                <li class="class_{{ lang.0 }}"><a href=""><img src="{% static lang.0 %}.png"/><!--{{ lang.0 }}--></a></li>
+                                        {% else %}
+                                                <li class="class_{{ lang.0 }}"><a href="{{ request.path|chlocale:lang.0 }}" ><img src="{% static lang.0 %}.png"/><!--{{ lang.0 }}--></a></a></li>
+
+                                        {% endifequal %}
+                                    {% endfor %}
+
+                            </ul>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+	</div>
+</div>
+	<div class="header">
+        <div class="container middle">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="logo">
+                                <a href="/"><img src="{% static "img/toplogo.png" %}" title="zweifach" alt="zweifach logo" class="logo" /></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-9 name">
+                            <h1><span class="zwei">ZWEI</span><span class="fach">.FACH</span></h1>
+                            <span class="slogan">  ZweiFach Übersetzungen </span>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                
+            </div>
+
+            {% block header %}  {% endblock %}
+
+
+        </div>
+    </div>
+
+
+	<div class="container content">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="row">
+					{% bootstrap_messages %}
+
+				    {% block content %}{% endblock %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+<div class="intblock">
+	<div class="container middle">
+		<div class="row">
+
+        </div>
+    </div>
+</div>
+
+
+<div class="footer">
+	<div class="container middle">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="row gmenubottom">
+                    <div class="col-xs-6">
+                        <div class="col-sm-6">
+                            <div class="flogo">
+                                <a href="/"><img src="{% static "img/flogo.png" %}" title="zweifach" alt="zweifach logo" class="logo" /></a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="fname">
+                                <h1><span class="fzwei">ZWEI</span><span class="ffach">.FACH</span></h1>
+                                <span class="fslogan"> </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+					<div class="col-xs-6 menu">
+						<ul class="nav nav-pills bmenu">
+						  <!--<li class="dropdown">
+						    <a class="dropdown-toggle"
+						       data-toggle="dropdown"
+						       href="#">
+						        Dropdown
+						        <b class="caret"></b>
+						      </a>
+						    <ul class="dropdown-menu">
+
+						    </ul>
+						  </li>-->
+					            <li><a href="{% url 'pages.views.home'  %}">{% trans "Home" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'leistungen' %}">{% trans "Leistungen" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'sprachkombinationen' %}">{% trans "Sprachkombinationen" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'preise' %}">{% trans "Preise" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'agb' %}">{% trans "AGB" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'impressum' %}">{% trans "Impressum" %}</a></li>
+                                <li><a href="{% url 'pages.views.site' 'kontakt' %}">{% trans "Kontakt" %}</a></li>
+                                <li><a href="{% url 'orderform.views.order' %}">Order</a></li>
+						</ul>
+					</div>
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+
