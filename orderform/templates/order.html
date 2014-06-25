@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load localeurl_tags %}
+
+{% load bootstrap3 %}
+
+{% block breadcrumbs %}
+	
+	{% if request.path == "/en/" or request.path == "/ru/" or request.path == "/de/" %} 
+		<li class="active"> {{ detail.name }} </li> 
+	{% else %}
+		<li><a href="/">Главная</a></li>
+  
+		<li class="active"> Оставить заявку </li>
+	{% endif %} 
+  	
+{% endblock %}
+
+
+{% block title %}Контакты{% endblock title %}
+{% block content %}
+<h2>{% trans "Контакты" %}</h2>
+<div class="information">
+
+	<p>
+		Skype: volant247</br>
+		ICQ: 175156523</br>
+		barkalov_anton@mail.ru</br>
+		<li>{{ time }}</li>
+	</p>
+</div>
+
+<div class="row">
+		<div class="col-sm-8">
+		<div class="contacts">
+			<h3 class="page-header">
+				Оставьте вашу заявку на перевод через данную форму!
+			</h3>
+			{% if message %}
+				<div class="alert alert-success">
+					{{ message }}
+				</div>	
+			{% endif %}
+			
+			<form method="post" action="">
+			{% csrf_token %} {% bootstrap_form form %} {% buttons %}
+				<button type="submit" class="btn btn-primary">
+					{% bootstrap_icon "star" %} Отправить
+
+				</button>
+			{% endbuttons %}
+			</form>
+		</div>	
+	</div>
+</div>
+{% endblock content %}
