@@ -11,10 +11,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='home.html'), name='index' ),
+    #url(r'^$', TemplateView.as_view(template_name='home.html'), name='index' ),
     # Examples:
     #url(r'^pages/', include('django.contrib.flatpages.urls')),
     #url(r'^$', 'pages.views.site', {'alias': 'home'}),
+
+    url(r'^$', include('pages.urls')),
+
     url(r'^order/', include('orderform.urls')),
     url(r'^site/', include('pages.urls')),
     url(r'^admin/',  include(admin.site.urls)), # admin site
