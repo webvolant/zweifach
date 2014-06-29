@@ -170,3 +170,8 @@ EMAIL_HOST_PASSWORD = '9c471de3'
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'volant247@googlemail.com'
 
+
+CAPTCHA_BACKGROUND_COLOR = 'white'
+CAPTCHA_FOREGROUND_COLOR = '#CC5404'
+CAPTCHA_OUTPUT_FORMAT = u' %(hidden_field)s %(text_field)s %(image)s'
+
