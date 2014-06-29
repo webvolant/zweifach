@@ -8,6 +8,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 
 from django.contrib import admin
+
+from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -28,6 +30,11 @@ urlpatterns = patterns('',
 urlpatterns += patterns('',
     url(r'^captcha/', include('captcha.urls')),
 )
+
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += patterns('',
+        url(r'^rosetta/', include('rosetta.urls')),
+    )
 
 handler404 = 'app.views.handler404'
 #handler500 = 'devel.views.error5'

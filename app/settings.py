@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'orderform',
     'captcha',
     'ckeditor',
+    'rosetta',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -96,7 +97,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-LANGUAGE_CODE = 'de-De'
+LANGUAGE_CODE = 'de-DE'
 
 TIME_ZONE = 'UTC'
 

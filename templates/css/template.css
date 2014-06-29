@@ -41,6 +41,7 @@ ul.class_language{
     float:right;
     top:20px;
     position: relative;
+    width: 120px;
 }
 
 ul.class_language li {
@@ -205,18 +206,30 @@ span.slogan{
     text-decoration: none;
 }
 
-.service .col-sm-3 {
-    width:196px;
+.service .imgg {
+    width:190px;
+    float:left;
+    position:relative;
+}
+.service img {
+    width:187px;
+    float:left;
+    position:relative;
 }
 
 .stext {
     color:#484848;
-    font-size: 18px;
+    font-size: 16px;
     width: 130px;
     text-align: center;
     position: relative;
     top: -70px;
-    left: 35px;
+    left: 30px;
+}
+
+.service .imgg a:hover{
+    opacity:0.7;
+
 }
 
 

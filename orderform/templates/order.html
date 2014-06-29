@@ -18,24 +18,15 @@
 {% endblock %}
 
 
-{% block title %}Контакты{% endblock title %}
+{% block title %}{% trans "Bestellung form" %}{% endblock title %}
 {% block content %}
-<h2>{% trans "Контакты" %}</h2>
-<div class="information">
 
-	<p>
-		Skype: volant247</br>
-		ICQ: 175156523</br>
-		barkalov_anton@mail.ru</br>
-		<li>{{ time }}</li>
-	</p>
-</div>
 
 <div class="row">
 		<div class="col-sm-8">
 		<div class="contacts">
 			<h3 class="page-header">
-				Оставьте вашу заявку на перевод через данную форму!
+				{% trans "Bestellung form" %}
 			</h3>
 			{% if message %}
 				<div class="alert alert-success">
@@ -43,10 +34,10 @@
 				</div>	
 			{% endif %}
 			
-			<form method="post" action="">
+			<form method="post" action="" enctype="multipart/form-data">
 			{% csrf_token %} {% bootstrap_form form %} {% buttons %}
 				<button type="submit" class="btn btn-primary">
-					{% bootstrap_icon "star" %} Отправить
+					{% bootstrap_icon "star" %} {% trans "Send" %}
 
 				</button>
 			{% endbuttons %}

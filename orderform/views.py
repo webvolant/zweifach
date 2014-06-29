@@ -1,45 +1,56 @@
 # ~*~ coding: utf-8 ~*~
 from django.shortcuts import render
 
-from models import OrderForm
+from models import *
 
-from django.core.mail import send_mail
 
+from django.core.mail import send_mail, EmailMessage
 from datetime import date
 from datetime import datetime
 
-#from django.http import HttpResponse
-#from django.template import RequestContext, loader
+from django.core.mail import EmailMultiAlternatives
+from django.utils.translation import ugettext_lazy as _
+
 
 def order(request):
     message=""
     br = "</br>"
-    name = request.POST.get('name','')
-    contact = request.POST.get('contact','')
-    sourcelang = request.POST.get('sourcelang','')
-    resultlang = request.POST.get('resultlang','')
-    doc_file = request.POST.get('doc_file','')
-    comments = request.POST.get('comments','')
-    html = "Name:"+name+br+"Kontakt:"+contact+br+sourcelang+">"+resultlang+br+doc_file+br+"Comments:"+comments+br
+    #name = request.POST.get('name','utf-8')
+    #contact = request.POST.get('contact','utf-8')
+    #email = request.POST.get('email','')
+    email = "123"
+    #sourcelang = request.POST.get('sourcelang','')
+    #resultlang = request.POST.get('resultlang','')
+    #comments = request.POST.get('comments','utf-8')
     d = date.today()
+    #html = email+br+"<b>Name:</b>"+name+br+"Kontakt:"+contact+br+"sourcelang+">"+resultlang"+br+"Comments:"+comments+br
     # datetime.combine(d, datetime.min.time())name = request.POST.get('name', '')
-    if request.method == 'POST':
-        form = OrderForm(request.POST)
-        if form.is_valid():
-            form.save()
 
-            send_mail('ZweiFach-email', html, 'volant247@gmail.com',['barkalov_anton@mail.ru'], fail_silently=False)
-			#email_subject = "I need test it"
-    		#email_body = render_to_string("email/invite.html", {})
-    		#from_email = "noreply@mail.ru"
-    		#to = "barkalov_anton@mail.ru"
-    		#msg = EmailMultiAlternatives(subject,message,from_email, [to])
+    if request.method == 'POST':
+        form = EmailForm(request.POST, request.FILES)
+        if form.is_valid():
+            #form.save()
+            name = form.cleaned_data['name']
+            contact = form.cleaned_data['contact']
+            slang = form.cleaned_data['slang']
+            rlang = form.cleaned_data['rlang']
+            comments = form.cleaned_data['comments']
+            attach = request.FILES['file']
+            html="<b>Name:</b>"+name+"</br>"+"<b>Kontakt:</b>"+contact+"</br>"+slang+">"+rlang+"</br>"+comments
+            subject, from_email, to = 'Zweifach website', 'volant247@gmail.com', 'barkalov_anton@mail.ru'
+            msg = EmailMultiAlternatives(subject, html, from_email, [to])
+            try:
+                msg.attach(attach.name, attach.read(), attach.content_type)
+            except:
+                return "Attachment error"
+            msg.attach_alternative(html, "text/html")
             #msg.content_subtype = "html"
-            #msg.send()
-            message = "Gut!"
-            form = OrderForm()
+            msg.send()
+
+            message = _("Danke!")
+            form = EmailForm()
     else:
-        form = OrderForm()
+        form = EmailForm()
     return render(request, 'order.html', {
         'form': form,
         'message': message,
