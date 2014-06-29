@@ -9,8 +9,8 @@ import sys
 # Если вы получаете ошибку 500 Internal Server Error,
 # скорее всего проблема именно в путях поиска.
 
-sys.path.insert(0, '/home/hosting_volant247/projects/devel/app')
-sys.path.insert(0, '/home/hosting_volant247/projects/devel')
+sys.path.insert(0, '/home/hosting_volant247/projects/zweifach/app')
+sys.path.insert(0, '/home/hosting_volant247/projects/zweifach')
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 

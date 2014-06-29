@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-29 11:17+0200\n"
-"PO-Revision-Date: 2014-06-28 22:02+0000\n"
-"Last-Translator:   <barkalov_anton@mail.ru>\n"
+"POT-Creation-Date: 2014-06-29 13:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Translated-Using: django-rosetta 0.7.4\n"
 
 #: captcha/fields.py:91
 msgid "Play CAPTCHA as audio file"
@@ -33,101 +32,9 @@ msgstr ""
 msgid "This field is required."
 msgstr ""
 
-#: orderform/models.py:15
-msgid "English"
-msgstr ""
-
-#: orderform/models.py:16
-msgid "Deutsch"
-msgstr ""
-
-#: orderform/models.py:17
-msgid "Russisch"
-msgstr ""
-
-#: orderform/models.py:28
-msgid "Name"
-msgstr ""
-
-#: orderform/models.py:29
-msgid "Как с вами связаться(телефон, email или Skype)"
-msgstr ""
-
-#: orderform/models.py:30
-msgid "С какого языка нужно перевести?"
-msgstr ""
-
-#: orderform/models.py:31
-msgid "На какой язык нужно перевести?"
-msgstr ""
-
-#: orderform/models.py:32
-msgid "Загрузите ваш документ"
-msgstr ""
-
-#: orderform/models.py:33
-msgid "Ваши комментарии"
-msgstr ""
-
-#: orderform/models.py:34
-msgid "Статус"
-msgstr ""
-
-#: orderform/models.py:47
-msgid "Ihre Name"
-msgstr ""
-
-#: orderform/models.py:49
-msgid "Ihre Kontakts"
-msgstr ""
-
-#: orderform/models.py:50
-msgid "SLang"
-msgstr ""
-
-#: orderform/models.py:51
-msgid "RLang"
-msgstr ""
-
-#: orderform/models.py:52
-msgid "File"
-msgstr ""
-
-#: orderform/models.py:53
-msgid "Message"
-msgstr ""
-
-#: orderform/models.py:54
-msgid "Bitte Sicherheitscode eingeben"
-msgstr ""
-
-#: orderform/views.py:50
-msgid "Danke!"
-msgstr ""
-
-#: orderform/templates/order.html:21 orderform/templates/order.html.py:29
-msgid "Bestellung form"
-msgstr ""
-
-#: orderform/templates/order.html:40
-msgid "Send"
-msgstr ""
-
-#: pages/templates/main/home.html:15
-msgid "Technik & Industrie"
-msgstr "Технический перевод"
-
-#: pages/templates/main/home.html:31
-msgid "Dolmetschen"
-msgstr "Устный перевод"
-
-#: pages/templates/main/home.html:36
-msgid "Lokalisierung"
-msgstr "Локализация сайтов"
-
 #: templates/base.html:216 templates/base.html.py:333
 msgid "Home"
-msgstr "Начало"
+msgstr ""
 
 #: templates/base.html:217 templates/base.html.py:334
 msgid "Leistungen"
@@ -135,7 +42,7 @@ msgstr "Услуги"
 
 #: templates/base.html:218 templates/base.html.py:335
 msgid "Sprachkombinationen"
-msgstr "Языки"
+msgstr ""
 
 #: templates/base.html:219 templates/base.html.py:336
 msgid "Preise"
@@ -151,7 +58,7 @@ msgstr ""
 
 #: templates/base.html:222 templates/base.html.py:339
 msgid "Kontakt"
-msgstr "Контакты"
+msgstr ""
 
 #: templates/base.html:227
 msgid "Bestellung"

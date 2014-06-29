@@ -35,7 +35,7 @@ body{
 
 
 ul.class_language{
-	display: inline-flex;
+
 	padding:0px;
 	list-style: none;
     float:right;
@@ -53,6 +53,7 @@ ul.class_language img{
 	width:45px;
 	height: 45px;
 	display: block;
+    float:left;
 }
 
 
@@ -238,9 +239,16 @@ span.slogan{
     height:120px;
 }
 
+.partners img{
+    height: 80px;
+    padding:10px 10px;
+    float:left;
+    position:relative;
+}
 
-
-
+.titles{
+    color: #CC5404;
+}
 
 ul.modules {
     list-style: none;

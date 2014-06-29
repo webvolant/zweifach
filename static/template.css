@@ -41,6 +41,7 @@ ul.class_language{
     float:right;
     top:20px;
     position: relative;
+    width: 120px;
 }
 
 ul.class_language li {
@@ -56,7 +57,11 @@ ul.class_language img{
 
 
 
-
+.mbutton{
+    position:relative;
+    top:25px;
+    left:20px;
+}
 
 .gmenu{
     position:relative;
@@ -95,7 +100,7 @@ div.logo img{
 span.zwei {
 	font-size: 45px;
 	color:#484848;
-	font-family: "b52";
+	font-family: Tahoma, Verdana, Arial, Helvetica;
 	letter-spacing: 24px;
 }
 
@@ -103,7 +108,7 @@ span.fach {
 	font-size: 46px;
 	color:#484848;
 	font-weight: bold;
-	font-family: "b52";
+	font-family: Tahoma, Verdana, Arial, Helvetica;
 	letter-spacing: 24px;
 }
 
@@ -112,7 +117,10 @@ span.slogan{
 	color:#484848;
 	position: relative;
 	top:-25px;
-	letter-spacing: 2px;
+	letter-spacing: 13px;
+    position:relative;
+    top:-13px;
+    text-align: center;
 }
 
 
@@ -170,7 +178,7 @@ span.slogan{
 .nav-pills > li > a:hover {
     box-shadow: 0px 0px 8px -2px #000000;
     background: url('img/menu_back_active.png');
-    color:#000;
+    color:#fff;
 }
 
 
@@ -182,8 +190,15 @@ span.slogan{
 
 .footer .nav-pills > li > a:hover {
     box-shadow: 0px 0px 8px -2px #000000;
-    background: #db3500;
-    color:#000;
+    background: url('img/menu_back_active.png');
+    color:#fff;
+}
+
+
+.mactive{
+    box-shadow: 0px 0px 8px -2px #000000;
+    background: url('img/menu_back_active.png');
+    color:#fff;
 }
 
 
@@ -191,18 +206,30 @@ span.slogan{
     text-decoration: none;
 }
 
-.service .col-sm-3 {
-    width:196px;
+.service .imgg {
+    width:190px;
+    float:left;
+    position:relative;
+}
+.service img {
+    width:187px;
+    float:left;
+    position:relative;
 }
 
 .stext {
     color:#484848;
-    font-size: 18px;
+    font-size: 16px;
     width: 130px;
     text-align: center;
     position: relative;
     top: -70px;
-    left: 35px;
+    left: 30px;
+}
+
+.service .imgg a:hover{
+    opacity:0.7;
+
 }
 
 
