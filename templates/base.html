@@ -6,6 +6,8 @@
         {% load i18n %}
 		{% load localeurl_tags %}
 
+        {% load easy_maps_tags %}
+
         <title>{% block title %}home {% endblock %} / Zweifach B</title>
 
         <meta content='{% block keywords %}{% endblock %}' name='keywords'/>
@@ -274,6 +276,13 @@
         </div>
     </div>
 
+<div class="mapblock">
+	<div class="container22 middle22">
+		<div class="row">
+            {% block mapblock %}  {% endblock %}
+        </div>
+    </div>
+</div>
 
 	<div class="container content">
 		<div class="row">

@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 from django.utils.translation import gettext
 
 import os
-
+import socket
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -23,6 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 't9&+m79!3%t)^y4thx-r@1)ke-w7n#*7k03j-se*4qov6upoz%'
+
+if socket.gethostname().startswith('vLinuxMint'):
+    LIVEHOST = False
+else:
+    LIVEHOST = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,6 +53,8 @@ INSTALLED_APPS = (
     'captcha',
     'ckeditor',
     'rosetta',
+    'geoposition',
+    'easy_maps',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,12 +80,28 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if LIVEHOST:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'volant24_zweif78',
+            'USER': 'volant24_zweif78',
+            'PASSWORD': 'DWH4O32hZ',
+            'HOST': 'mysql4.locum.ru',
+            'PORT': '3306',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'zweifach',
+            'USER': 'root',
+            'PASSWORD': '9c471de3',
+            'HOST': '127.0.0.1',
+            'PORT': '3306',
+        }
+    }
 
 
 #Templates
@@ -174,4 +197,8 @@ DEFAULT_FROM_EMAIL = 'volant247@googlemail.com'
 CAPTCHA_BACKGROUND_COLOR = 'white'
 CAPTCHA_FOREGROUND_COLOR = '#CC5404'
 CAPTCHA_OUTPUT_FORMAT = u' %(hidden_field)s %(text_field)s %(image)s'
+
+
+
+EASY_MAPS_CENTER = (-41.3, 32)
 

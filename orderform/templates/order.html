@@ -5,6 +5,10 @@
 
 {% load bootstrap3 %}
 
+{% load easy_maps_tags %}
+
+
+
 {% block breadcrumbs %}
 	
 	{% if request.path == "/en/" or request.path == "/ru/" or request.path == "/de/" %} 
@@ -19,11 +23,18 @@
 
 
 {% block title %}{% trans "Bestellung form" %}{% endblock title %}
+
+{% block mapblock %}
+    <!-- Default map with 300x400 dimensions -->
+        {% easy_map "Deutschland, Grünstadt, Albert-Schweizer-Straße 24" 100% 300 %}
+{% endblock %}
+
 {% block content %}
-
-
 <div class="row">
 		<div class="col-sm-8">
+
+
+
 		<div class="contacts">
 			<h3 class="page-header">
 				{% trans "Bestellung form" %}
