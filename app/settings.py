@@ -120,7 +120,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'de'
 
 TIME_ZONE = 'UTC'
 
@@ -172,6 +172,12 @@ REDACTOR_OPTIONS = {'removeStyles': True}
 REDACTOR_UPLOAD = 'uploads/'
 
 CKEDITOR_UPLOAD_PATH = ""
+
+
+LOCALE_PATHS = (
+    'locale',
+    #os.path.join(PROJECT_DIR, 'locale'),
+)
 
 #
 LANGUAGES = (
