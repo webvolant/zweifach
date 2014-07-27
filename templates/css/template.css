@@ -5,6 +5,28 @@ body{
 
 }
 
+span.autor{
+    font-size: 16px;
+    font-style: bold;
+
+}
+
+.slidok{
+    font-size: 18px;
+    font-style: italic;
+    width:820px;
+    text-align: center;
+}
+
+.slidokpic{
+    background:url('books.png') no-repeat;
+    position: relative;
+    top:-33px;
+    float: right;
+    width: 150px;
+    height: 140px;
+}
+
 .middle{
     margin: 0 auto;
     width:980px;
@@ -87,6 +109,7 @@ ul.class_language img{
 
     position:relative;
     top:30px;
+    left:-30px;
 }
 
 
@@ -94,19 +117,19 @@ div.logo img{
 	height:200px;
 	position: relative;
 	top: 10px;
-    left:20px;
+    left:-20px;
 }
 
 
 span.zwei {
-	font-size: 45px;
+	font-size: 65px;
 	color:#484848;
 	font-family: Tahoma, Verdana, Arial, Helvetica;
 	letter-spacing: 24px;
 }
 
 span.fach {
-	font-size: 46px;
+	font-size: 68px;
 	color:#484848;
 	font-weight: bold;
 	font-family: Tahoma, Verdana, Arial, Helvetica;
@@ -114,11 +137,11 @@ span.fach {
 }
 
 span.slogan{
-	font-size: 14px;
+	font-size: 15px;
 	color:#484848;
 	position: relative;
-	top:-25px;
-	letter-spacing: 13px;
+	top:-24px;
+	letter-spacing: 7px;
     position:relative;
     top:-13px;
     text-align: center;
@@ -129,6 +152,7 @@ span.slogan{
 
 .content{
     padding: 20px;
+
 }
 
 
@@ -208,12 +232,16 @@ span.slogan{
 }
 
 .service .imgg {
-    width:190px;
+    width:195px;
     float:left;
     position:relative;
 }
+.service{
+    text-align: center;
+}
+
 .service img {
-    width:187px;
+    width:177px; 
     float:left;
     position:relative;
 }
@@ -225,7 +253,7 @@ span.slogan{
     text-align: center;
     position: relative;
     top: -70px;
-    left: 30px;
+    left: 25px;
 }
 
 .service .imgg a:hover{
@@ -237,6 +265,8 @@ span.slogan{
 .intblock {
     background: url("img/int_back.png");
     height:120px;
+    padding:25px;
+    font-family: "Times New Roman"
 }
 
 .partners img{

@@ -187,7 +187,46 @@
             //if(link == "/") {$('.menu li:first').addClass('mactive');} else {$('.menu li a[href="'+link+'"]').parent().addClass('mactive');}
 
 
+            window.index = 0;
+			window.Count= 13;
+			
+			//window.index = 0;
+			window.content= 13;
 
+			window.content = new Array();
+			window.content[0]="«В переводе я передаю не слово в слово, а мысль в мысль» "+'<span class="autor">'+"Иероним, богослов, переводчик Библии"+'</span>';
+			window.content[1]="«Der Koran sagt: \"Gott hat jedem Volke einen Propheten gegeben in seiner eigenen Sprache.\" So ist jeder Übersetzer ein Prophet in seinem Volke». "+'<span class="autor">'+"Johann Wolfgang von Goethe, deutscher Dichter"+'</span>';
+			window.content[2]="«Перевод – всегда комментарий» "+'<span class="autor">'+"Лео Бек, раввин немецко-польского происхождения, учёный-философ"+'</span>';
+			window.content[3]="«Wirklich übersetzen heißt: etwas, das in einer andern Sprache gesprochen ist, seiner Sprache anpassen.» "+'<span class="autor">'+"Martin Luther, deutscher Theologe, Reformator und Übersetzer"+'</span>';
+			window.content[4]="«Переводы – это цветы под стеклом»"+'<span class="autor">'+" Вольфганг Менцель, немецкий публицист и историк"+'</span>';
+			window.content[5]="««Ist es nicht sonderbar, dass eine wörtliche Übersetzung fast immer eine schlechte ist? Und doch lässt sich alles gut übersetzen. Man sieht hieraus, wie viel es sagen will, eine Sprache ganz verstehen; es heißt, das Volk ganz kennen, das sie spricht.» "+'<span class="autor">'+"Georg Christoph Lichtenberg, deutscher Aphoristiker und Physiker"+'</span>';
+			window.content[6]="«Переводчики – почтовые лошади просвещения» "+'<span class="autor">'+"А.С. Пушкин, великий русский поэт"+'</span>';
+			window.content[7]="«Перевести произведение с одного языка на другой – всё равно что снять с него кожу, перевести через границу и там нарядить в национальный костюм»"+'<span class="autor">'+"Карл Краус, австрийский писатель, поэт-сатирик, литературный и художественный критик"+'</span>';
+			window.content[8]="«All translation is a compromise - the effort to be literal and the effort to be idiomatic.» "+'<span class="autor">'+"Benjamin Jowett, englischer Theologe und Philologe"+'</span>';
+			window.content[9]="«Übersetzer sind als geschäftige Kuppler anzusehen, die uns eine halbverschleierte Schöne als höchst liebenswürdig anpreisen: Sie erregen eine unwiderstehliche Neigung nach dem Original.» "+'<span class="autor">'+"Johann Wolfgang von Goethe, deutscher Dichter"+'</span>';
+			window.content[10]="«Дух языка отчетливее всего выражается в непереводимых словах»"+'<span class="autor">'+"Мария Эбнер-Эшенбах, австрийская писательница, драматург"+'</span>';
+			window.content[11]="«Die Grenzen meiner Sprache bedeuten die Grenzen meiner Welt.»"+'<span class="autor">'+"Ludwig Wittgenstein, österreichischer Philosoph"+'</span>';
+			window.content[12]="«То, что ускользнуло от читателя, не может укрыться от переводчика»"+'<span class="autor">'+"Плиний младший"+'</span>';
+			
+			window.images = new Array();
+			window.images[0] = "";//"url(/static/img/toplogo.png)";
+			window.images[1] = "";//"444";
+			window.images[2] = "";//"url(/static/img/toplogo.png)";
+
+
+
+
+			setInterval(function(){
+			 $("div.slidok").fadeOut(500, function () {
+			   $("div.slidok").css("backgroundImage", window.images[window.index ]);
+			   $("div.slidok").html(window.content[window.index ]);
+			   $("div.slidok").fadeIn(500);
+			   if(window.index < window.Count-1) 
+			     
+			 	 window.index = Math.floor(Math.random() * 13)+0;//++;
+			   else window.index = 0;
+			 });
+			}, 10500);	
 		});
 	</script>
 
@@ -259,8 +298,8 @@
                             </div>
                         </div>
                         <div class="col-sm-7 name">
-                            <h1><span class="zwei">ZWEI</span><span class="fach">.FACH</span></h1>
-                            <span class="slogan">  ZweiFach Übersetzungen </span>
+                            <h1><span class="zwei">ZWEI</span><span class="fach">FACH</span></h1>
+                            <span class="slogan">  ZweiFacheKontrollemit 4-Augen-Prinzip </span>
                         </div>
 
 
@@ -299,10 +338,17 @@
 <div class="intblock">
 	<div class="container middle">
 		<div class="row">
+			<div class="slidokpic"></div>
+			<div class="slidok">
+				«Перевод иностранного текста требует соблюдения не одного, а двух условий. Оба они существенны, и оба сами по себе недостаточны: это знание языка и знание цивилизации, с которой связан язык"<span class="autor"> Ж. Мунен, французский языковед</span>
+			</div>
 
         </div>
     </div>
 </div>
+
+
+
 
 {% block partners %}  {% endblock partners %}
 
